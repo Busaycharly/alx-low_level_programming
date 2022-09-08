@@ -1,0 +1,2 @@
+#!/bin/ash
+gcc -E $CFILE >> c
