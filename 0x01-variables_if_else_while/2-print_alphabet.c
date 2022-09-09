@@ -5,7 +5,7 @@
 * followed by a new line
 * Return: 0 if successful
 */
-nt main(void)
+int main(void)
 {
 char ch;
 
