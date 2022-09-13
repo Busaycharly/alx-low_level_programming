@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * print_times_table -  times table
- * @n : times table to use
+ * print_times_table - prints the n times table, starting with 0
+ * @n : number of the times table to use
  * Description: print times table
  * Return:void
  */
 
-void times_table(void) 
+void ptint_times_table(int n) 
 {
 
 int a = 0, rep, b;
