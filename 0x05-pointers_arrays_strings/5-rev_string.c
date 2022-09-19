@@ -37,7 +37,7 @@ c = *end_c;
 *end_c = *star_c;
 *star_c = c;
 
-		
+
 star_c++;
 end_c--;
 }
