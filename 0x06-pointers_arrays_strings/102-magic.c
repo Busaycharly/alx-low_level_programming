@@ -3,7 +3,7 @@
 /**
  * main prints a[2] = 98
  *
- * Return: Always 0
+ * Return: Always 0 (success)
  */
 
 int main(void)
