@@ -10,41 +10,40 @@
  */
 void print_opcodes(char *a, int n)
 {
-int i;
+	int i;
 
-for (i = 0; i < n; i++)
-{
-printf("%.2hhx", a[i]);
-if (i < n - 1)
-printf(" ");
-}
-printf("\n");
+	for (i = 0; i < n; i++)
+	{
+		printf("%.2hhx", a[i]);
+		if (i < n - 1)
+			printf(" ");
+	}
+	printf("\n");
 
 }
 
 /**
- * main - print the opcodes og its own main function
+ * main - prints the opcodes of its own main function
  * @argc: number of arguments passed to the function
- * @rgv: array of pointers to arguments
+ * @argv: array of pointers to arguments
  *
- * Return: 0 if successful
+ * Return: always O
  */
 int main(int argc, char **argv)
 {
-int n;
+	int n;
 
-if (argc != 2)
-{
-printf("Error\n");
-exit(1);
+	if (argc != 2)
+	{
+		printf("Error\n");
+		exit(1);
+	}
+	n = atoi(argv[1]);
+	if (n < 0)
+	{
+		printf("Error\n");
+		exit(2);
+	}
+	print_opcodes((char *)&main, n);
+	return (0);
 }
-n = atoi(argv[1]);
-if (n < 0)
-{
-printf("Error\n");
-exit(2);
-}
-print_opcodes((char *)&main, n);
-return (0);
-}
-
