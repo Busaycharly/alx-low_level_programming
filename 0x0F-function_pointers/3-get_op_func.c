@@ -2,10 +2,9 @@
 #include <stdlib.h>
 
 /**
- * get_op_func - selects the correct operation to perform
- * @s: operation to perform
- *
- * Return: pointer to the correct function
+ * get_op_func - select the correct operation function asked by user
+ * @s: operator argument
+ * Return: function pointer corresponding to operator given
  */
 int (*get_op_func(char *s))(int, int)
 {
@@ -17,14 +16,9 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-int i;
+int i = 0;
 
-i = 0;
-while (ops[i].op != NULL)
-{
-if (strcmp(s, ops[i].op) == 0)
-break;
+while (ops[i].op != NULL && *(ops[i].op) != *s)
 i++;
-}
 return (ops[i].f);
 }
