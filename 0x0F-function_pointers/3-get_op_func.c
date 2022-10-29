@@ -1,13 +1,11 @@
 #include "3-calc.h"
-#include <stdio.h>
-#include <string.h>
+#include <stdlib.h>
 
 /**
- * get_op_func - Compares function with pointer and returns the equal.
- * @s: points a char
- * Return: Returns the function and the operator when equal
-**/
-
+ * get_op_func - select the correct operation function asked by user
+ * @s: operator argument
+ * Return: function pointer corresponding to operator given
+ */
 int (*get_op_func(char *s))(int, int)
 {
 op_t ops[] = {
@@ -18,14 +16,9 @@ op_t ops[] = {
 {"%", op_mod},
 {NULL, NULL}
 };
-
 int i = 0;
 
-while (ops[i].op != NULL)
-{
-if (!strcmp(ops[i].op, s))
+while (ops[i].op != NULL && *(ops[i].op) != *s)
+		i++;
 return (ops[i].f);
-i++;
-}
-return (NULL);
 }
