@@ -1,2 +1,1 @@
-#!/bin/bash
-coding in C
+# 0x1E-search_algorithms
